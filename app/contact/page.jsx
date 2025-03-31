@@ -53,17 +53,17 @@ export default function Contact() {
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative container mx-auto px-6 py-12">
-          <h2 className="text-5xl font-bold text-center text-white mb-4">
+          <h2 className="text-6xl font-bold text-center text-white mb-4">
             Reach out to us
           </h2>
-          <p className="text-lg text-center text-white mb-6">
+          <p className="text-xl text-center text-white mb-6">
             You can contact us via email or follow us on social media for
             updates and more information.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a
               href="mailto:devils.adastra@gmail.com"
-              className="text-blue-400 hover:underline text-lg"
+              className="text-blue-400 hover:underline text-xl"
             >
               devils.adastra@gmail.com
             </a>
@@ -118,7 +118,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-gray-700 dark:text-gray-200"
               >
                 Name
               </label>
@@ -134,7 +134,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-gray-700 dark:text-gray-200"
               >
                 Email
               </label>
@@ -150,7 +150,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-gray-700 dark:text-gray-200"
               >
                 Subject
               </label>
@@ -166,7 +166,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-gray-700 dark:text-gray-200"
               >
                 Message
               </label>

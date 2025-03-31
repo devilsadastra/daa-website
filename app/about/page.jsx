@@ -12,10 +12,10 @@ export default function About() {
         <div className="relative container mx-auto px-6 py-12">
           {/* Header */}
           <header className="mb-12 text-center">
-            <h1 className="text-5xl font-bold text-white mt-10">
+            <h1 className="text-6xl font-bold text-white mt-10">
               About Devils Ad Astra
             </h1>
-            <p className="mt-4 text-lg text-white">
+            <p className="mt-4 text-xl text-white">
               Empowering students to explore the cosmos
             </p>
           </header>
@@ -24,7 +24,7 @@ export default function About() {
           <section className="grid gap-8 md:grid-cols-2 items-center">
             <div className="mt-10 flex justify-center">
               <div className="space-y-6 max-w-lg">
-                <p className="text-lg text-white">
+                <p className="text-2xl text-white">
                   Devils Ad Astra is a student-led club at Arizona State
                   University, dedicated to exploring the frontiers of space
                   travel and innovation. Our mission is to inspire, educate, and
@@ -32,7 +32,7 @@ export default function About() {
                   opportunities for hands-on projects, collaborations with
                   industry experts, and participation in cutting-edge research.
                 </p>
-                <p className="text-lg text-white">
+                <p className="text-2xl text-white">
                   We design spacecraft models, organize events with renowned
                   experts, and foster a community where creativity meets
                   exploration.
@@ -43,7 +43,7 @@ export default function About() {
               <img
                 src="/rockets.jpg"
                 alt="Club members collaborating on a space project"
-                className="w-full max-w-lg rounded-lg shadow-lg object-cover"
+                className="w-full max-w-xl rounded-lg shadow-lg object-cover"
               />
             </div>
           </section>

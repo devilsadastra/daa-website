@@ -69,20 +69,20 @@ export default function Team() {
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative container mx-auto px-6 py-12 mt-10">
           <header className="mb-12 text-center">
-            <h1 className="text-5xl font-bold text-white">Our Team</h1>
-            <p className="mt-4 text-lg text-white">
+            <h1 className="text-6xl font-bold text-white">Our Team</h1>
+            <p className="mt-4 text-xl text-white">
               Meet the brilliant minds behind Devils Ad Astra.
             </p>
           </header>
 
-          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
                 className="transition-transform duration-300 hover:-translate-y-2 opacity-0 translate-y-6 animate-riseUp"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <Card className="bg-white h-full min-h-[450px] flex flex-col justify-between p-6">
+                <Card className="bg-white h-full min-h-[450px] max-w-[300px] flex flex-col justify-between p-6">
                   <div className="flex flex-col items-center">
                     <img
                       src={member.image}
@@ -90,7 +90,7 @@ export default function Team() {
                       className="w-32 h-32 rounded-full object-cover"
                     />
                     <div className="mt-5 text-center">
-                      <CardTitle className="text-black text-base">
+                      <CardTitle className="text-black text-xl">
                         {member.name}
                       </CardTitle>
                       <CardDescription className="text-black text-sm mt-1">
