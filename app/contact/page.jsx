@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,8 +8,13 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 
 export default function Contact() {
+  const [isSending, setIsSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSending(true);
+    setSuccess(false);
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
@@ -22,14 +27,22 @@ export default function Contact() {
       });
 
       if (res.ok) {
-        console.log("Message sent successfully");
-        // Optionally clear the form or show a success message
         e.target.reset();
+        setSuccess(true);
+
+        // Reset button after 10 seconds
+        setTimeout(() => {
+          setIsSending(false);
+          setSuccess(false);
+        }, 10000);
       } else {
-        console.error("Failed to send message");
+        setIsSending(false);
+        alert("Message failed to send. Please try again.");
       }
     } catch (error) {
       console.error("Error sending message", error);
+      setIsSending(false);
+      alert("Something went wrong. Please try again.");
     }
   };
 
@@ -37,7 +50,6 @@ export default function Contact() {
     <>
       <Navbar />
       <main className="relative min-h-screen pt-20 bg-[url('/space-bg.jpg')] bg-cover bg-center">
-        {/* Dark overlay for legibility */}
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative container mx-auto px-6 py-12">
@@ -168,8 +180,18 @@ export default function Contact() {
               />
             </div>
             <div className="text-center">
-              <Button type="submit" className="w-full">
-                Submit
+              <Button
+                type="submit"
+                disabled={isSending}
+                className={`w-full transition-colors duration-300 ${
+                  success ? "bg-green-600 hover:bg-green-700" : ""
+                }`}
+              >
+                {success
+                  ? "Message Sent!"
+                  : isSending
+                  ? "Sending..."
+                  : "Submit"}
               </Button>
             </div>
           </form>
