@@ -52,7 +52,7 @@ export default function Contact() {
       <main className="relative min-h-screen pt-20 bg-[url('/space-bg.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/70"></div>
 
-        <div className="relative container mx-auto px-6 py-12">
+        <div className="relative container mx-auto px-6 py-12 mt-10">
           <h2 className="text-6xl font-bold text-center text-white mb-4">
             Reach out to us
           </h2>
@@ -66,6 +66,14 @@ export default function Contact() {
               className="text-blue-400 hover:underline text-xl"
             >
               devils.adastra@gmail.com
+            </a>
+            <a
+              href="https://asu.campuslabs.com/engage/organization/devilsadastra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline text-lg"
+            >
+              Sun Devil Sync
             </a>
             <a
               href="https://instagram.com/adastradevils"

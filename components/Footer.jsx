@@ -16,6 +16,14 @@ export default function Footer() {
             Email
           </Link>
           <Link
+            href="https://asu.campuslabs.com/engage/organization/devilsadastra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-gray-400 text-sm"
+          >
+            Sun Devil Sync
+          </Link>
+          <Link
             href="https://instagram.com/adastradevils"
             target="_blank"
             rel="noopener noreferrer"
