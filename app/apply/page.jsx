@@ -60,6 +60,7 @@ export default function Apply() {
   const submitApplication = async (data, formEvent) => {
     try {
       const res = await fetch("/api/apply", {
+        // Updated endpoint
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
