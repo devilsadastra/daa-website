@@ -3,12 +3,12 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-black py-6">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        <p className="text-white text-sm">
+      <div className="container mx-auto px-6 flex flex-col items-center md:flex-row md:justify-between">
+        <p className="text-white text-sm text-center">
           &copy; {new Date().getFullYear()} Devils Ad Astra. All rights
           reserved.
         </p>
-        <div className="flex space-x-4 mt-4 md:mt-0">
+        <div className="flex flex-col items-center space-y-4 mt-4 md:mt-0 md:flex-row md:space-y-0 md:space-x-4">
           <Link
             href="mailto:devils.adastra@gmail.com"
             className="text-white hover:text-gray-400 text-sm"
