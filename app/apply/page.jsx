@@ -106,7 +106,7 @@ export default function Apply() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-black dark:text-gray-200"
               >
                 Name
               </label>
@@ -122,7 +122,7 @@ export default function Apply() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-black dark:text-gray-200"
               >
                 ASU Email
               </label>
@@ -138,7 +138,7 @@ export default function Apply() {
             <div>
               <label
                 htmlFor="major"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-black dark:text-gray-200"
               >
                 Major
               </label>
@@ -154,7 +154,7 @@ export default function Apply() {
             <div>
               <label
                 htmlFor="skills"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-black dark:text-gray-200"
               >
                 Your Skills
               </label>
@@ -170,7 +170,7 @@ export default function Apply() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-black dark:text-gray-200"
               >
                 Why do you want to join?
               </label>
@@ -186,7 +186,7 @@ export default function Apply() {
             <div>
               <label
                 htmlFor="resume"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="block text-base font-medium text-black dark:text-gray-200"
               >
                 Resume
               </label>
@@ -204,9 +204,7 @@ export default function Apply() {
                 type="submit"
                 disabled={isSending}
                 className={`w-full transition-colors duration-300 ${
-                  success
-                    ? "bg-green-600 hover:bg-green-700"
-                    : "bg-white text-black"
+                  success ? "bg-green-600 hover:bg-green-700" : ""
                 }`}
               >
                 {success
