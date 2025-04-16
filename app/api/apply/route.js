@@ -24,7 +24,7 @@ export async function POST(req) {
 
     // Create filename from name
     const [firstName, ...lastNames] = name.trim().split(" ");
-    const lastName = lastNames.join("_");
+    const lastName = lastNames.length > 0 ? lastNames.join("_") : "NoLastName";
     const fileName = `${firstName}_${lastName}_Resume.pdf`;
 
     const transporter = nodemailer.createTransport({
